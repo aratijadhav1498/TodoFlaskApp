@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My To-Do List</h1>
+
+    <!-- Add Task -->
+    <form action="/add" method="POST" class="task-form">
+
+        <input type="text"
+               name="task"
+               placeholder="Enter your task"
+               required>
+
+        <button type="submit">Add Task</button>
+
+    </form>
+
+
+    <!-- Search -->
+    <h2>Tasks</h2>
+
+    <form method="GET" action="/" class="search-form">
+
+        <input type="text"
+               name="Search"
+               placeholder="Search tasks">
+
+        <button type="submit">Search</button>
+
+    </form>
+
+
+    <!-- Task List -->
+    {% if tasks %}
+
+        <ul class="task-list">
+
+            {% for task in tasks %}
+
+                <li class="task-item">
+
+                    <div class="task-info">
+
+                        <!-- Task Name -->
+                        <h3>{{ task["task"] }}</h3>
+
+
+                        <!-- Task Details -->
+                        <div class="task-details">
+
+                            <span class="status {{ task['status']|lower }}">
+                                Status: {{ task["status"] }}
+                            </span>
+
+                            <span class="date">
+                                Created: {{ task["created_at"] }}
+                            </span>
+
+                            <span class="priority {{ task['priority']|lower }}">
+                                Priority: {{ task["priority"] }}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Actions -->
+                    <div class="actions">
+
+                        <a href="/complete/{{ task['id'] }}"
+                           class="complete-btn">
+                            Complete
+                        </a>
+
+                        <a href="/edit/{{ task['id'] }}"
+                           class="edit-btn">
+                            Edit
+                        </a>
+
+                        <a href="/delete/{{ task['id'] }}"
+                           class="delete-btn">
+                            Delete
+                        </a>
+
+                    </div>
+
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+    {% else %}
+
+        <p class="no-tasks">No tasks available</p>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
+
+
