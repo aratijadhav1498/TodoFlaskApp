@@ -1,0 +1,317 @@
+
+/* Page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+}
+
+
+/* Add Task Form */
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+
+/* Search Form */
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2c3e50;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* Task List */
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Individual Task */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    margin-bottom: 12px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* Task Information */
+
+.task-info {
+    flex: 1;
+}
+
+.task-info h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+
+/* Task Details */
+
+.task-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+
+/* Status */
+
+.status {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 9px;
+    border-radius: 15px;
+}
+
+
+/* Date */
+
+.date {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 5px 9px;
+    border-radius: 15px;
+}
+
+
+/* Priority */
+
+.priority {
+    background-color: #fff3e0;
+    color: #e65100;
+    padding: 5px 9px;
+    border-radius: 15px;
+}
+
+
+/* Action Buttons */
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-left: 15px;
+}
+
+.actions a {
+    padding: 7px 11px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+
+/* Complete */
+
+.complete-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+
+/* Edit */
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+
+/* No Tasks */
+
+.no-tasks {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+
+
+/* Dynamic Status Colors */
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+/* Dynamic Priority Colors */
+
+.priority.high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.priority.medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.priority.low {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Task Hover Effect */
+
+.task-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Action Button Hover Effects */
+
+.actions a {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.actions a:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+
+/* Input Focus */
+
+.task-form input:focus,
+.search-form input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.25);
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .task-form,
+    .search-form {
+        flex-direction: column;
+    }
+
+    .task-form input,
+    .search-form input {
+        width: auto;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .task-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .actions a {
+        flex: 1;
+        text-align: center;
+    }
+
+}

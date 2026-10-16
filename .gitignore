@@ -1,0 +1,21 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# IDE settings
+.idea/
+
+# Local database - keep your local data private
+*.db
+*.sqlite
+*.sqlite3
