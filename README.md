@@ -1,171 +1,90 @@
-# 📝 Flask To-Do List Application
+# Flask To-Do List Application
 
-A simple and professional **To-Do List web application** built using **Python, Flask, HTML, CSS, and SQLite**.
+A task management web application built using Python, Flask, and SQLite. It allows users to organize daily tasks through a simple, professional interface.
 
-This project demonstrates CRUD operations, database integration, task management, search functionality, and a responsive user interface.
+## Features
 
----
+- **Create Tasks:** Add new tasks to your list.
+- **Update Tasks:** Edit existing task details.
+- **Delete Tasks:** Remove tasks when they are no longer needed.
+- **Task Status:** Mark tasks as Pending or Completed.
+- **Task Priority:** Assign Low, Medium, or High priority.
+- **Date and Time:** Record when tasks are created.
+- **Search Tasks:** Find tasks using the search feature.
 
-## 🚀 Features
+## Technologies Used
 
-* ➕ Add new tasks
-* 👀 View all tasks
-* ✏️ Edit existing tasks
-* 🗑️ Delete tasks
-* ✅ Mark tasks as completed
-* ⏳ Track task status
-* 📅 Store task creation date and time
-* 🔍 Search tasks
-* ⭐ Set task priority
-* 🎨 Dynamic priority and status styling
-* 📱 Responsive design for smaller screens
-* 💾 SQLite database for persistent data storage
+- Python
+- Flask
+- SQLite
+- HTML
+- CSS
+- Git and GitHub
 
----
-
-## 🛠️ Technologies Used
-
-* **Python**
-* **Flask**
-* **SQLite**
-* **HTML5**
-* **CSS3**
-* **Jinja2**
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
-Flask-ToDo-List/
-│
+TodoFlaskApp/
 ├── app.py
-├── todo.db
-│
 ├── templates/
-│   ├── index.html
-│   ├── add_task.html
-│   └── edit_task.html
-│
+│   └── index.html
 ├── static/
 │   └── style.css
-│
+├── .gitignore
 └── README.md
 ```
 
----
+*Note: Your templates folder may contain additional HTML files.*
 
-## ⚙️ How to Run the Project
+## How to Run Locally
 
-### 1. Clone the repository
+1. Clone this repository:
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
+   ```bash
+   git clone https://github.com/aratijadhav1498/TodoFlaskApp.git
 
-### 2. Open the project folder
+   ```
 
-```bash
-cd Flask-ToDo-List
-```
+2. Open the project folder:
 
-### 3. Install Flask
+   ```bash
+   cd TodoFlaskApp
+   ```
 
-```bash
-pip install flask
-```
+3. Create and activate a virtual environment:
 
-### 4. Run the application
+   ```bash
+   python -m venv venv
+   ```
 
-```bash
-python app.py
-```
+   Windows:
 
-### 5. Open the application
+   ```bash
+   venv\Scripts\activate
+   ```
 
-Open your browser and visit:
+4. Install Flask:
 
-```text
-http://127.0.0.1:5000/
-```
+   ```bash
+   pip install Flask
+   ```
 
----
+5. Run the application:
 
-## 💾 Database
+   ```bash
+   python app.py
+   ```
 
-The application uses **SQLite** to store tasks.
+6. Open the local address displayed in the terminal, usually `http://127.0.0.1:5000/`.
 
-Each task contains information such as:
+## Learning Outcomes
 
-* Task name
-* Status
-* Creation date and time
-* Priority
+This project demonstrates practical experience with Flask routing, CRUD operations, SQLite database integration, HTML forms, task filtering, and Git-based version control.
 
-The application performs CRUD operations directly with the SQLite database.
+## Future Improvements
 
----
+- User registration and login
+- Deployment to a public hosting platform
+- REST API endpoints
+- Automated tests
 
-## 🔍 Search
-
-Users can search for tasks using the search bar.
-
-This makes it easier to find specific tasks when the task list becomes larger.
-
----
-
-## ⭐ Task Priority
-
-Tasks can be assigned different priority levels:
-
-* 🔴 High
-* 🟠 Medium
-* 🟢 Low
-
-The application dynamically changes the appearance of the priority badge based on the selected priority.
-
----
-
-## 📱 Responsive Design
-
-The interface is designed to adapt to smaller screen sizes using CSS media queries.
-
----
-
-## 🎯 Learning Objectives
-
-This project helped me practice:
-
-* Python programming
-* Flask web development
-* Routing
-* HTML templates
-* Jinja2
-* SQLite database operations
-* CRUD operations
-* Form handling
-* Searching and filtering
-* CSS styling
-* Responsive web design
-
----
-
-## 🔮 Future Improvements
-
-Possible future enhancements include:
-
-* User authentication and login
-* Task categories
-* Due dates and reminders
-* Sorting and filtering
-* Pagination
-* REST API
-* Deployment to a cloud platform
-
----
-
-## 👩‍💻 Author
-
-**Aarti**
-
-Built as a Python and Flask portfolio project.
